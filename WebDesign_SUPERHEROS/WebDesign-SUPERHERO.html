@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--starting of head section-->
+
+    <head>
+    
+        <title>Design-superheros</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <!-- linking sources-->
+        
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!--side navigation script-->
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        
+        <!-- styling the elements-->
+        
+        <style>
+            
+            body{
+                background-color:#e74c3c;
+                background-image:url('bg.jpg'); 
+            }
+            
+            p{
+                color:grey;
+                font-size:15px;
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            span{
+                z-index:1;
+                margin-top:25px;
+                margin-left:25px;
+                position:fixed;
+            }
+            
+            h2{
+                font-family: 'Raleway', sans-serif;
+            }
+            
+            .well{
+                box-shadow: 5px 0px 20px #e74c3c;
+            }
+            
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #e74c3c;
+                background-image:url('batman.jpg');
+                overflow-x: hidden;
+                padding-top: 60px;
+                transition: 0.5s;
+                box-shadow: 5px 0px 40px #e74c3c;
+            }
+            
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #ecf0f1;
+                display: block;
+                transition: 0.3s
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+            
+            .sidenav a:hover, .offcanvas a:focus{
+                color: #e74c3c;
+            }
+            
+            span:hover{
+                color:#e74c3c;
+            }
+            
+            .row #content:hover{
+                box-shadow: 5px 0px 100px #e74c3c;
+                transition:box-shadow 1s;
+            }
+
+            img:hover{
+                width:105px;
+                height:105px;
+                transition:width,height 0.05s;
+            }
+            
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+        </style>
+        
+    </head>
+    
+    <!-- end of head section-->
+    
+    
+    <!--start of body section-->
+    
+    <body> 
+        
+        <!-- menu icon top left-->
+        <a href="#">
+            <span class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"></span>
+        </a>
+        
+        <!--header -->
+        <h2 class="text-center"><kbd>SUPERHEROS</kbd></h2>
+        
+        <!--bootstrap container starts here-->
+        <div  class="container">
+            
+            <!--sidenav items-->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">COMICS</a>
+                <a href="#">MOVIES</a>
+                <a href="#">SUPERHEROS</a>
+                <a href="#">SUPERVILLIANS</a>
+            </div>
+            
+            <!--bootstrap well-->
+            <div class="well well-lg">
+            
+                <!--bootstrap row-->
+                <div class="row" align="center">
+                    <div class="col-md-2 center-block" align="center">
+                        <img src="ironmanicon.png" class="img-circle" width="100px" height="100px"/>
+                    </div>
+                    <div id="content" class="col-md-10 center-block" align="center">
+                        <blockquote class="blockquote-reverse">
+                            <p>
+                            Iron Man (Anthony Edward "Tony" Stark) is a fictional superhero appearing in American comic books published by Marvel Comics. 
+                            The character was created by writer and editor Stan Lee, developed by scripter Larry Lieber,
+                            and designed by artists Don Heck and Jack Kirby. 
+                            The character made his first appearance in Tales of Suspense #39 (cover dated March 1963).
+                            </p>
+                        </blockquote>
+                    </div>
+                </div></br>
+                <div class="row" align="center">
+                    <div class="col-md-2 center-block" align="center">
+                        <img src="flashicon.png" class="img-circle" width="100px" height="100px"/>
+                    </div>
+                    <div id="content" class="col-md-10 center-block" align="center">
+                        <blockquote class="blockquote-reverse">
+                            <p>
+                            The Flash is an American television series developed by Greg Berlanti, Andrew Kreisberg and Geoff Johns, airing on The CW. 
+                            It is based on the DC Comics character Barry Allen / Flash, a costumed superhero crime-fighter with the power to move at superhuman speeds. 
+                            It is a spin-off from Arrow, existing in the same fictional universe. 
+                            The series follows Allen, portrayed by Grant Gustin, a crime scene investigator who gains super-human speed, 
+                            which he uses to fight criminals, including others who have also gained superhuman abilities.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div></br>
+                <div class="row" align="center">
+                    <div class="col-md-2 center-block" align="center">
+                        <img src="supericon.png" class="img-circle" width="100px" height="100px"/>
+                    </div>
+                    <div id="content" class="col-md-10 center-block" align="center">
+                        <blockquote class="blockquote-reverse">
+                            <p>
+                            Superman is a fictional superhero appearing in American comic books published by DC Comics. 
+                            The character was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933. 
+                            They sold Superman to Detective Comics, the future DC Comics, in 1938. 
+                            Superman debuted in Action Comics #1 (cover-dated June 1938) and subsequently appeared in various radio serials, newspaper strips, television programs, films, and video games.
+                            With this success, Superman helped to create the superhero archetype and establish its primacy within the American comic book.
+                            The character is also referred to by such epithets as the Man of Steel, the Man of Tomorrow, and The Last Son of Krypton.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div></br>
+                <div class="row" align="center">
+                    <div class="col-md-2 center-block" align="center">
+                        <img src="robinicon.png" class="img-circle" width="100px" height="100px"/>
+                    </div>
+                    <div id="content" class="col-md-10 center-block" align="center">
+                        <blockquote class="blockquote-reverse">
+                            <p>
+                            Robin is the name of several fictional superheroes appearing in American comic books published by DC Comics. 
+                            The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to superhero Batman. 
+                            The team of Batman and Robin is commonly referred to as the Dynamic Duo or the Caped Crusaders. 
+                            The character's first incarnation, Dick Grayson, debuted in Detective Comics #38 (April 1940).
+                            </p>
+                        </blockquote>
+                    </div>
+                </div></br>
+                <div class="row" align="center">
+                    <div class="col-md-2 center-block" align="center">
+                        <img src="wondericon.png" class="img-circle" width="100px" height="100px"/>
+                    </div>
+                    <div id="content" class="col-md-10 center-block" align="center">
+                        <blockquote class="blockquote-reverse">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div></br>
+                <div class="row" align="center">
+                    <div class="col-md-2 center-block" align="center">
+                        <img src="spidericon.png" class="img-circle" width="100px" height="100px"/>
+                    </div>
+                    <div id="content" class="col-md-10 center-block" align="center">
+                        <blockquote class="blockquote-reverse">
+                            <p>
+                            Spider-Man is a fictional superhero appearing in American comic books published by Marvel Comics.
+                            The character was created by writer-editor Stan Lee and writer-artist Steve Ditko, 
+                            and first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.
+                            Lee and Ditko conceived the character as an orphan being raised by his Aunt May and Uncle Ben, and as a teenager,
+                            having to deal with the normal struggles of adolescence in addition to those of a costumed crime-fighter.
+                            Spider-Man's creators gave him super strength and agility, the ability to cling to most surfaces, 
+                            shoot spider-webs using wrist-mounted devices of his own invention, which he calls "web-shooters",
+                            and react to danger quickly with his "spider-sense", enabling him to combat his foes.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div></br>
+            </div>
+        </div>
+    </body>
+</html>
