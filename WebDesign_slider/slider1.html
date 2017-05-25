@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This webpage is made by sainikhil manda to showcase Animated Circles">
+    <meta name="author" description="Sainikhil manda">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="three.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        #circle1 {
+            border: solid 2px white;
+            width: 20px;
+            height: 20px;
+            float: left;
+            -webkit-border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -webkit-transform: rotate(45deg);
+            position: relative;
+            transition: 1.3s left;
+            background: white;
+            left: 0;
+            margin-top: 50px;
+        }
+        
+        #circle2 {
+            border: solid 2px white;
+            width: 20px;
+            height: 20px;
+            float: left;
+            border-radius: 50%;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        
+        .container2 {
+            height: 200px;
+            background-color: #1abc9c;
+        }
+        
+        .animationclass {
+            animation: drop 0.8s alternate;
+            animation-iteration-count: 2;
+        }
+        
+        .animationclass1 {
+            animation: drop1 0.8s alternate;
+            animation-iteration-count: 2;
+        }
+        
+        .animationclass94 {
+            animation: drop94 0.8s alternate;
+            animation-iteration-count: 2;
+        }
+        
+        .animationclassopposite194 {
+            animation: drop194 0.8s alternate;
+            animation-iteration-count: 2;
+        }
+        
+        @keyframes drop {
+            from {
+                -webkit-border-bottom-left-radius: 10px;
+            }
+            to {
+                -webkit-border-bottom-left-radius: 0px;
+            }
+        }
+        
+        @keyframes drop1 {
+            from {
+                -webkit-border-bottom-left-radius: 10px;
+            }
+            to {
+                -webkit-border-bottom-left-radius: 0px;
+            }
+        }
+        
+        @keyframes drop94 {
+            from {
+                -webkit-border-top-right-radius: 10px;
+            }
+            to {
+                -webkit-border-top-right-radius: 0px;
+            }
+        }
+        
+        @keyframes drop194 {
+            from {
+                -webkit-border-top-right-radius: 10px;
+            }
+            to {
+                -webkit-border-top-right-radius: 0px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="3D_output" style="width:100%;height:500px;">
+
+    </div>
+    <script type="text/javascript">
+        // once everything is loaded, we run our Three.js stuff.
+        function init() {
+            var cont = document.getElementById("3D_output");
+            var w = cont.offsetWidth;
+            var h = cont.offsetHeight;
+            // create a scene, that will hold all our elements such as objects, cameras and lights.
+            var scene = new THREE.Scene();
+
+            // create a camera, which defines where we're looking at.
+            var camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+
+            // create a render and set the size
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setClearColor("#1abc9c");
+            renderer.setSize(w, h);
+            renderer.shadowMapEnabled = true;
+
+            // create the ground plane
+
+
+            // create a cube
+            var cubeGeometry = new THREE.BoxGeometry(5, 5, 5);
+            /*var cubeMaterial = new THREE.MeshLambertMaterial({
+                color: 3447003
+            });*/
+            var cubeMaterial = new THREE.MeshBasicMaterial( { color: 0x3D59AB, specular: 0x555555, shininess: 20 } );
+             
+            var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+            cube.castShadow = true;
+
+            // position the cube
+            //cube.position.x = -4;
+            //cube.position.y = 3;
+            // cube.position.z = 0;
+
+            // add the cube to the scene
+            scene.add(cube);
+
+
+            // position and point the camera to the center of the scene
+            // camera.position.x = -30;
+            //camera.position.y = 10;
+            camera.position.z = 30;
+            // camera.lookAt(scene.position);
+
+            //adding ambient light
+            var ambientLight = new THREE.AmbientLight(0x0c0c0c);
+            scene.add(ambientLight);
+
+            // add spotlight for the shadows
+            var spotLight = new THREE.SpotLight(0xffffff);
+            spotLight.position.set(0, 0, 30);
+            spotLight.castShadow = true;
+            scene.add(spotLight);
+
+            // add the output of the renderer to the html element
+            document.getElementById("3D_output").appendChild(renderer.domElement);
+            var render = function () {
+                renderer.render(scene, camera);
+               
+                cube.rotation.y += 0.01;
+                //cube.position.y = 2 + (10 * Math.abs(Math.sin(step)));
+                 requestAnimationFrame(render);
+            }
+            
+            render();
+        }
+        window.onload = init;
+    </script>
+    <div class="container2">
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+        <div id="circle2"></div>
+    </div>
+
+    <script type="text/javascript">
+        var a = 1;
+        var elms = document.querySelectorAll("[id='circle1']");
+        var movingleft = false;
+        var movingright = true;
+
+        function anim() {
+            //alert(a);
+            if ($("#circle1").hasClass("animationclass")) {
+                $("#circle1").removeClass('animationclass');
+                $("#circle1").addClass('animationclass1');
+            } else if ($("#circle1").hasClass("animationclass1")) {
+                $("#circle1").removeClass('animationclass1');
+                $("#circle1").addClass('animationclass');
+            } else {
+                $("#circle1").addClass('animationclass');
+            }
+
+            for (var i = 0; i < elms.length; i++) {
+                elms[i].style.left = parseFloat(getComputedStyle(elms[i]).left) + 120 + 'px';
+            }
+
+        };
+
+        function anim1() {
+            //alert(a);
+            if ($("#circle1").hasClass("animationclass94")) {
+                $("#circle1").removeClass('animationclass94');
+                $("#circle1").addClass('animationclass194');
+            } else if ($("#circle1").hasClass("animationclass194")) {
+                $("#circle1").removeClass('animationclass194');
+                $("#circle1").addClass('animationclass94');
+            } else {
+                $("#circle1").addClass('animationclass94');
+            }
+
+            for (var i = 0; i < elms.length; i++) {
+                elms[i].style.left = parseFloat(getComputedStyle(elms[i]).left) - 120 + 'px';
+            }
+
+        };
+        $(document).click(function () {
+            if (a > 11 || a < 1) {
+                if (movingright) {
+                    movingright = false;
+                    movingleft = true;
+                } else {
+                    movingright = true;
+                    movingleft = false;
+                }
+            }
+            if (movingright) {
+                a += 1;
+
+                anim();
+            } else {
+                a -= 1;
+
+                anim1();
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>
