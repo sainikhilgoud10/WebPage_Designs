@@ -176,7 +176,13 @@
     <script>
         $(document).ready(function () {
             $('#skillSlider').carousel("cycle");
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $(".preview_button_desktop").hide();
+            }else{
+                $(".preview_button_mobile").hide();
+            }
         });
+        
     </script>
 </head>
 
@@ -184,9 +190,8 @@
     <video id="my-video" class="video" autoplay="autoplay" loop="loop" mute="" width="300" height="150">
         <source src="video-background.mp4" type="video/mp4" />
     </video>
-
-    <!--************navigation bar not required noow
     
+    <!--************navigation bar not required noow
     <div class="container-fluid">
         <div class="content1">
             <div class="row">
@@ -199,7 +204,6 @@
 
         </div>
     </div>
-    
     ***********-->
 
     <div class="container-fluid" style="margin-top:15%;">
@@ -281,11 +285,11 @@
         <!--**************************************************modal classes block****************************************-->
 
         <!-- modal-project-1 starts here-->
-        <div id="modal-project-1" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <iframe src="https://www.youtube.com/embed/zeeBShUlR-U" width=screen.width height="400px" frameborder="0" allowfullscreen></iframe>
+        <div id="modal-project-1" class="modal fade" role="dialog" >
+            <div class="modal-dialog" style="width:75%;">
+                <div class="modal-content" >
+                    <div class="modal-body" >
+                        <center><iframe src="https://www.youtube.com/embed/KocrZGQqARs" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
                     </div>
                 </div>
             </div>
@@ -293,16 +297,37 @@
         <!-- modal-project-1 ends here-->
         <!-- modal-project-2 starts here-->
         <div id="modal-project-2" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="width:75%;">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <iframe src="https://pixelblur.files.wordpress.com/2016/05/output_ezsf7y.gif?w=451" width=screen.width height="400px" frameborder="0" allowfullscreen></iframe>
+                        <center><iframe src="https://pixelblur.files.wordpress.com/2016/05/output_ezsf7y.gif?w=451" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
                     </div>
                 </div>
             </div>
         </div>
         <!-- modal-project-2 ends here-->
-
+        <!-- modal-project-3 starts here-->
+        <div id="modal-project-3" class="modal fade" role="dialog">
+            <div class="modal-dialog" style="width:75%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <center><iframe src="https://pixelblur.files.wordpress.com/2016/05/output_jcfqox.gif?w=317" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-project-3 ends here-->
+        <!-- modal-project-4 starts here-->
+        <div id="modal-project-4" class="modal fade" role="dialog">
+            <div class="modal-dialog" style="width:75%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <center><iframe src="https://www.youtube.com/embed/XghY-SmhlSg" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-project-4 ends here-->
         <!--**************************************************modal classes block****************************************-->
 
         <!--**********************************************Project Content block*****************************************-->
@@ -329,8 +354,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td class="preview_button_desktop">
                                         <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-1">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://www.youtube.com/watch?v=KocrZGQqARs" style="color:white;text-decoration:none;">Preview</a></button>
                                     </td>
                                 </tr>
                             </table>
@@ -359,8 +387,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td class="preview_button_desktop">
                                         <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-2">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://pixelblur.files.wordpress.com/2016/05/output_ezsf7y.gif?w=451" style="color:white;text-decoration:none;">Preview</a></button>
                                     </td>
                                 </tr>
                             </table>
@@ -375,6 +406,72 @@
                     </div>
                 </div>
                 <!--project 2 ends here-->
+                <!--project 3 starts here-->
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>MotionControlledGame</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" style="padding:10px;">
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-lg"><a href="https://github.com/sainikhilgoud10/ComputerVision-ImageProcessing/tree/master/MotionControlledGame" style="color:white;text-decoration:none;">Code</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="preview_button_desktop">
+                                        <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-3">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://pixelblur.files.wordpress.com/2016/05/output_jcfqox.gif?w=317" style="color:white;text-decoration:none;">Preview</a></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel-footer">
+                            <small>
+                                <h4><kbd>python</kbd>&nbsp&nbsp<kbd>opencv</kbd>&nbsp&nbsp<kbd>pygame</kbd></h4>
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <!--project 3 ends here-->
+                <!--project 4 starts here-->
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>ChatBot</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" style="padding:10px;">
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-lg"><a href="https://github.com/sainikhilgoud10/Android/tree/master/ChatBot" style="color:white;text-decoration:none;">Code</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="preview_button_desktop">
+                                        <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-4">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://www.youtube.com/watch?v=XghY-SmhlSg" style="color:white;text-decoration:none;">Preview</a></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel-footer">
+                            <small>
+                                <h4><kbd>Android</kbd>&nbsp&nbsp<kbd>jsoup</kbd>&nbsp&nbsp<kbd>WebScraping</kbd></h4>
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <!--project 4 ends here-->
             </div>
         </div>
 
