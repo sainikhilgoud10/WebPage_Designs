@@ -178,6 +178,8 @@
             $('#skillSlider').carousel("cycle");
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                 $(".preview_button_desktop").hide();
+                $(".preview_background_desktop").hide();
+                $("body").css('background-color','#34495e');
             }else{
                 $(".preview_button_mobile").hide();
             }
@@ -187,7 +189,7 @@
 </head>
 
 <body>
-    <video id="my-video" class="video" autoplay="autoplay" loop="loop" mute="" width="300" height="150">
+    <video id="my-video" class="video preview_background_desktop" autoplay="autoplay" loop="loop" mute="" width="300" height="150">
         <source src="video-background.mp4" type="video/mp4" />
     </video>
     
@@ -220,7 +222,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 center-block">
-                    <a id="about" class="cta">ABOUT</a>
+                    <a id="about" class="cta" style="color:white;text-decoration:none;">ABOUT</a>
                 </div>
             </div>
             <div class="row">
@@ -267,7 +269,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 center-block">
-                    <a id="about" class="cta">SKILLS</a>
+                    <a id="about" class="cta" style="color:white;text-decoration:none;">SKILLS</a>
                 </div>
             </div>
             <div class="row">
@@ -328,6 +330,39 @@
             </div>
         </div>
         <!-- modal-project-4 ends here-->
+        <!-- modal-project-5 starts here-->
+        <div id="modal-project-5" class="modal fade" role="dialog">
+            <div class="modal-dialog" style="width:75%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <center><iframe src="https://www.youtube.com/embed/wGvgsjpixsQ" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-project-5 ends here-->
+        <!-- modal-project-6 starts here-->
+        <div id="modal-project-6" class="modal fade" role="dialog">
+            <div class="modal-dialog" style="width:75%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <center><iframe src="https://www.youtube.com/embed/xymKFq-YrI8" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-project-6 ends here-->
+        <!-- modal-project-7 starts here-->
+        <div id="modal-project-7" class="modal fade" role="dialog">
+            <div class="modal-dialog" style="width:75%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <center><iframe src="https://www.youtube.com/embed/tecJS61II-A" width="75%" height="400px" frameborder="0" allowfullscreen></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-project-7 ends here-->
         <!--**************************************************modal classes block****************************************-->
 
         <!--**********************************************Project Content block*****************************************-->
@@ -336,7 +371,7 @@
         <div class="projectContent">
             <div class="row" style="margin-bottom:50px;">
                 <div class="col-md-12 center-block">
-                    <a id="about" class="cta">PROJECTS</a>
+                    <a id="about" class="cta" style="color:white;text-decoration:none;">PROJECTS</a>
                 </div>
             </div>
             <div class="row">
@@ -366,7 +401,7 @@
 
                         <div class="panel-footer">
                             <small>
-                                <h4><kbd>Android</kbd>&nbsp&nbsp<kbd>java</kbd>&nbsp&nbsp<kbd>application</kbd></h4>
+                                <h4><kbd>android</kbd>&nbsp&nbsp<kbd>java</kbd>&nbsp&nbsp<kbd>application</kbd></h4>
                             </small>
                         </div>
 
@@ -399,7 +434,7 @@
 
                         <div class="panel-footer">
                             <small>
-                                <h4><kbd>python</kbd>&nbsp&nbsp<kbd>ifaddr</kbd>&nbsp&nbsp<kbd>Tkinter</kbd></h4>
+                                <h4><kbd>python</kbd>&nbsp&nbsp<kbd>ifaddr</kbd>&nbsp&nbsp<kbd>tkinter</kbd></h4>
                             </small>
                         </div>
 
@@ -465,13 +500,112 @@
 
                         <div class="panel-footer">
                             <small>
-                                <h4><kbd>Android</kbd>&nbsp&nbsp<kbd>jsoup</kbd>&nbsp&nbsp<kbd>WebScraping</kbd></h4>
+                                <h4><kbd>android</kbd>&nbsp&nbsp<kbd>jsoup</kbd>&nbsp&nbsp<kbd>webscraping</kbd></h4>
                             </small>
                         </div>
 
                     </div>
                 </div>
                 <!--project 4 ends here-->
+                <!--project 5 starts here-->
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>GestureDetection</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" style="padding:10px;">
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-lg"><a href="https://github.com/sainikhilgoud10/ComputerVision-ImageProcessing/blob/master/GestureDetection/GestureDetecttion.py" style="color:white;text-decoration:none;">Code</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="preview_button_desktop">
+                                        <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-5">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://www.youtube.com/watch?v=wGvgsjpixsQ" style="color:white;text-decoration:none;">Preview</a></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel-footer">
+                            <small>
+                                <h4><kbd>python</kbd>&nbsp&nbsp<kbd>opencv</kbd>&nbsp&nbsp<kbd>fingercount</kbd></h4>
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <!--project 5 ends here-->
+                <!--project 6 starts here-->
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>ZombieAi</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" style="padding:10px;">
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-lg"><a href="https://gist.github.com/sainikhilgoud10/baabd861ca3911e89dbef3623222b41d" style="color:white;text-decoration:none;">Code</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="preview_button_desktop">
+                                        <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-6">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://www.youtube.com/watch?v=xymKFq-YrI8" style="color:white;text-decoration:none;">Preview</a></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel-footer">
+                            <small>
+                                <h4><kbd>blender</kbd>&nbsp&nbsp<kbd>python</kbd>&nbsp&nbsp<kbd>ai</kbd>&nbsp&nbsp<kbd>Game</kbd></h4>
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <!--project 6 ends here-->
+                <!--project 7 starts here-->
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>HalfBrains(inprogress)</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" style="padding:10px;">
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-lg"><a href="https://github.com/sainikhilgoud10/GameDevelopment/tree/master/Blender/Fps_HalfBrains" style="color:white;text-decoration:none;">Source</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="preview_button_desktop">
+                                        <button class="btn btn-lg" data-toggle="modal" data-target="#modal-project-7">Preview</button>
+                                    </td>
+                                    <td class="preview_button_mobile">
+                                        <button class="btn btn-lg"><a href="https://www.youtube.com/watch?v=tecJS61II-A&t=15s" style="color:white;text-decoration:none;">Preview</a></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel-footer">
+                            <small>
+                                <h4><kbd>lighting</kbd>&nbsp&nbsp<kbd>modeling</kbd>&nbsp&nbsp<kbd>texturing</kbd></h4>
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <!--project 7 ends here-->
             </div>
         </div>
 
